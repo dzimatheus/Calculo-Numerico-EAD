@@ -5,7 +5,6 @@ function [x_root, iter] = falsa_posicao(f, a, b, eps)
     x_root = a; 
     
     // O loop continua ENQUANTO ( |f(x)| > eps OU |b-a| > eps )
-    // Isso garante que ele só pare quando AMBOS forem satisfeitos.
     while (abs(f(x_root)) > eps | abs(b - a) > eps) & iter < 1000
         iter = iter + 1;
         
